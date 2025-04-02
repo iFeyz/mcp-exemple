@@ -1,0 +1,44 @@
+# Cursor Rules for MCP-Server Project
+
+## Project Structure
+- Main API code is in the `src/` directory
+- MCP server code is in the `mcp/src/` directory
+- Built files go to the `dist/` directory
+- Database file is `database.sqlite` in the root directory
+
+## Coding Practices
+- Use TypeScript for all new code
+- Follow camelCase for variables and functions
+- Follow PascalCase for classes and types
+- Use async/await for asynchronous operations
+- Use proper type annotations
+
+## API Patterns
+- Controllers handle business logic
+- Routes define API endpoints
+- Entities represent database tables
+- Use TypeORM repositories for database operations
+- Return consistent JSON response structures
+
+## MCP Patterns
+- Define tools with clear JSON schemas
+- Validate input parameters
+- Handle errors gracefully
+- Return structured responses
+- Use axios for API calls
+
+## Development Workflow
+- Run `npm run dev` for local API development
+- Run `npm run build:mcp` to build the MCP server
+- Run `npm run start:mcp` to start the MCP server
+- For production, build both with `npm run build && npm run build:mcp`
+
+## Testing
+- Test API endpoints with tools like Postman or curl
+- Test MCP tools through Claude for Desktop
+- Verify data is correctly stored in the SQLite database
+
+## Deployment
+- For local testing, use the provided scripts
+- For remote access, use ngrok to expose the API
+- Configure Claude for Desktop to use the MCP server 
